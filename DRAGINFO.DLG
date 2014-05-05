@@ -1,0 +1,52 @@
+DLGINCLUDE 1 "DRGCONFG.H"
+
+DLGTEMPLATE IDD_CONFIG1 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "DrgDrag parameters", IDD_CONFIG1, 81, -35, 245, 199, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CONTROL         "", CO_OPERATION, 8, 154, 92, 35, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        LTEXT           "Draginfo.usOperation:", -1, 8, 189, 110, 8
+        CONTROL         "", CO_TYPE, 115, 154, 91, 35, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        LTEXT           "Dragitem.hstrType:", -1, 115, 189, 97, 8
+        CONTROL         "", CO_MECH, 8, 109, 92, 38, WC_COMBOBOX, 
+                        CBS_DROPDOWN | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Dragitem.Mechanism:", -1, 8, 147, 104, 8
+        CONTROL         "", CO_FORMAT, 115, 110, 91, 37, WC_COMBOBOX, 
+                        CBS_DROPDOWN | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Dragitem.Format:", -1, 115, 147, 102, 8
+        PUSHBUTTON      "OK", DID_OK, 8, 14, 40, 16
+        PUSHBUTTON      "Cancel", DID_CANCEL, 63, 14, 40, 16
+        LTEXT           "Dragitem.fsControl:", -1, 8, 103, 84, 8
+        ENTRYFIELD      "", EF_CONTAINER, 117, 93, 120, 8, ES_MARGIN
+        ENTRYFIELD      "", EF_FILE, 117, 64, 120, 8, ES_MARGIN
+        LTEXT           "Dragitem.hstrContainer:", -1, 115, 104, 108, 8
+        LTEXT           "Dragitem.hstrSource/Target:", -1, 115, 75, 124, 8
+        LISTBOX         CO_FCONTROL, 8, 62, 88, 41, LS_MULTIPLESEL
+        CONTROL         "", CO_RETURN, 115, 11, 86, 35, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        LTEXT           "Return (DM_PRINTOBJ, DM_DISCARDOBJ):", -1, 58, 49, 
+                        184, 8
+    END
+END
+
+DLGTEMPLATE IDD_CONFIG2 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "DrgDragFiles parameters", IDD_CONFIG2, 55, 59, 258, 94, 
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", EF_FILEPATH, 27, 36, 202, 8, ES_MARGIN
+        AUTORADIOBUTTON "fSourceRender=TRUE", RB_SOURCETRUE, 63, 75, 123, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "fSourceRender=FALSE", RB_SOURCEFALSE, 64, 63, 119, 
+                        10, WS_TABSTOP
+        LTEXT           "DrgDragFiles filename:", -1, 25, 47, 111, 8
+        PUSHBUTTON      "OK", DID_OK, 64, 8, 40, 14
+        PUSHBUTTON      "Cancel", DID_CANCEL, 141, 8, 40, 14
+    END
+END

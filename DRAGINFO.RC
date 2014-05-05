@@ -1,0 +1,45 @@
+/*********** DROPINFO  C Sample Program Resource Script File (.RC) ***************/
+/*                                                                            */
+/*  The window resources used by an application are defined in a resource     */
+/*  script file .RC.  This file is compiled by the resource compiler to       */
+/*  produce an executable-format file.                                        */
+/*  The definitions are either statements which define resources or           */
+/*  references to other files containing resources.                           */
+/*                                                                            */
+/*  In this resource script file:                                             */
+/*  ------------------------------------------------------------------------  */
+/*  Statement:                        References:                             */
+/*  MENU  ID_WINDOW PRELOAD           #include <os2.h>                        */
+/*  ACCELTABLE ID_WINDOW PRELOAD      #include "dropinfo.h"                      */
+/*  STRINGTABLE PRELOAD               ICON ID_WINDOW dropinfo.ico                */
+/*                                                                            */
+/******************************************************************************/
+
+
+#include <os2.h>
+#include "draginfo.h"
+
+ICON    ID_WINDOW  draginfo.ico
+ICON    ID_DRAGPTR drgdrag.ico
+
+MENU    ID_WINDOW PRELOAD
+BEGIN
+  SUBMENU "~Options", ID_OPTIONS
+  BEGIN
+    MENUITEM "Use ~DrgDrag",        IDM_DRGDRAG, MIS_TEXT
+    MENUITEM "Use DrgDrag~Files",   IDM_DRGDRAGFILES, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Configure parameters", IDM_CONFIGDLG, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "Clear ~Listbox",      IDM_CLEARLIST, MIS_TEXT
+    MENUITEM "Do ~Something else",  IDM_DOSOMETHING, MIS_TEXT
+  END
+END
+
+ACCELTABLE ID_WINDOW PRELOAD
+BEGIN
+  VK_F3, ID_EXITPROG, VIRTUALKEY
+END
+
+rcinclude draginfo.dlg
+

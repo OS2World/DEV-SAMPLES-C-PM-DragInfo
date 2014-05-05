@@ -1,0 +1,22 @@
+;******* DROPINFO C Sample Program Module Definition File (.DEF) ********
+;
+;  The module definition file supplies extra information about the program
+;  module to the LINKER.
+;
+;  Different HEAPSIZE used. ( 1024 bytes )
+
+
+NAME    dropinfo WINDOWAPI
+
+DESCRIPTION 'OS/2 Presentation Manager Sample'
+
+STUB    'OS2STUB.EXE'
+
+DATA    MULTIPLE
+
+STACKSIZE   16384
+HEAPSIZE    4096
+
+PROTMODE
+
+

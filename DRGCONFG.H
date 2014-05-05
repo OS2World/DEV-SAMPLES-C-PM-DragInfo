@@ -1,0 +1,13 @@
+#define CO_OPERATION                102
+#define CO_TYPE                     103
+#define CO_MECH                     104
+#define CO_FORMAT                   105
+#define CO_FCONTROL                 101
+#define EF_CONTAINER                106
+#define EF_FILE                     107
+#define CO_RETURN                   108
+#define IDD_CONFIG2                 200
+#define IDD_CONFIG1                 100
+#define EF_FILEPATH                 201
+#define RB_SOURCETRUE               202
+#define RB_SOURCEFALSE              203
